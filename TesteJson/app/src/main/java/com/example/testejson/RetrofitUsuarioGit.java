@@ -12,7 +12,7 @@ public interface RetrofitUsuarioGit {
     @GET("/users/{usuario}")
     Call<Usuario> getUsuario(@Path("usuario") String usuario);
 
-    @GET("/usuers/{usuario}/followers")
+    @GET("/users/{usuario}/followers")
     Call<List<Usuario>> getSeguidores(@Path("usuario") String usuario);
 
     public static final Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.github.com/").addConverterFactory(GsonConverterFactory.create()).build();
